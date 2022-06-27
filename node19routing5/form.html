@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event form</title>
+  <style>
+    body {
+      background: black url(./1.jpg);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+
+    ::placeholder {
+      color: tomato;
+    }
+
+    h1 {
+      font-size: 2.5em;
+    }
+
+    .container {
+      background-color: rgb(213 159 221 / 22%);
+      width: 400px;
+      margin: auto;
+      padding: 40px 40px 40px 40px;
+
+    }
+
+    .formrow {
+      margin: 10px 1px 10px 1px;
+      text-align: left;
+    }
+
+    label {
+      color: #FFFFFF;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-style: normal;
+      width: 28%;
+      position: relative;
+      vertical-align: middle;
+    }
+
+    input[type="text"],
+    select {
+      background-color: rgba(120, 109, 118, 0.36);
+      color: white;
+      outline: none;
+      border: 1px solid rgba(152, 149, 149, 0.42);
+      padding: 10px;
+      width: 90%;
+      vertical-align: middle;
+    }
+
+    select {
+      width: 58%;
+    }
+
+    option {
+      background-color: black;
+      color: white;
+    }
+
+    .date {
+      width: 40%;
+      margin: 0px 3px 0px 0px;
+    }
+
+    .time {
+      width: 40%;
+    }
+
+    .clm1 {
+      width: 25%;
+      padding: 10px;
+      text-align: left;
+      display: inline-block;
+    }
+
+    .clm2 {
+      width: 60%;
+      text-align: left;
+      display: inline-block;
+    }
+    input[type=radio]:checked+label {
+      color: #cd31c1;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Event Registration Form</h1>
+  <div class="container">
+    <form action="/review" method="post">
+      <div class="formrow">
+        <div class="clm1"><label for="name">YOUR NAME</label></div>
+        <div class="clm2"><input type="text" placeholder="Your Name" name="name" /></div>
+      </div>
+      <div class="formrow">
+        <div class="clm1"><label for="email">YOUR EMAIL</label></div>
+        <div class="clm2"><input type="email" placeholder="Your Email" name="email" /></div>
+      </div>
+      <div class="formrow">
+        <div class="clm1"><label for="phone">PHONE</label></div>
+        <div class="clm2"><input type="tel" placeholder="Your Number" name="phone" /></div>
+      </div>
+      <div class="formrow">
+        <div class="clm1"><label for="persons">No.of persons </label></div>
+        <div class="clm2"><select name="persons">
+            <option value="none" selected="" disabled="">Select numbers</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="200">200</option>
+            <option value="500">500</option>
+            <option value="1000">1000</option>
+          </select></div>
+      </div>
+      <div class="formrow">
+        <div class="clm1"><label for="date">Date / Time </label></div>
+        <div class="clm2"><input class="date" type="date" placeholder="pick date" name="date" /><input class="time"
+            type="time" placeholder="pick date" name="date" /></div>
+      </div>
+
+      <div class="formrow">
+        <div style="width: 100%;" class="clm1"><label for="FOOD">PLEASE CHOOSE YOUR FAVOURITE FOOD
+          </label></div>
+        <input style="width: 10%;" type="radio" id="vegfood" name="option1">
+        <label style="width:80%;" for="vegfood">veg</label><br>
+        <input style="width: 10%;" type="radio" id="nonfood" name="option1">
+        <label style="width: 80%;" for="nonfood">Non-veg</label><br>
+      </div>
+      <div class="formrow">
+        <div style="width: 100%;" class="clm1"><label for="FOOD">PLEASE CHOOSE YOUR FAVOURITE DRINK
+          </label></div>
+        <input style="width: 10%;" type="radio" id="Wine" name="option2">
+        <label style="width:80%;" for="Wine">Wine</label><br>
+        <input style="width: 10%;" type="radio" id="Whisky" name="option2">
+        <label style="width: 80%;" for="Whisky">Whisky</label><br>
+        <input style="width: 10%;" type="radio" id="Beer" name="option2">
+        <label style="width: 80%;" for="Beer">Beer</label><br>
+
+      </div>
+      <div class="formrow">
+        <div class="clm1"><input style="background-color: #DF49D3;cursor: pointer;" type="submit"></div>
+      </div>
+
+      <!-- <input type='radio' id="first" name="gender" /><label for="first">First</label>
+      <input type='radio' id="second" name="gender" /><label for="second">Second</label> -->
+    </form>
+  </div>
+  </div>
+</body>
+
+</html>
